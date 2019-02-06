@@ -22,4 +22,16 @@ for (let i = 0; i < 2; i++) {
     }
 }
 
-alert(appData.budjet / 30);
+appData.monetPerDay = appData.budjet / 30;
+
+alert("Ужедневный бюджет: " + appData.monetPerDay);
+
+if(appData.monetPerDay < 1000) {
+    console.log("Низкий уровень достатка");
+} else if (appData.monetPerDay > 1000 && appData.monetPerDay < 3000) {
+    console.log("Средний уровень достатка");
+} else if(appData.monetPerDay > 3000) {
+    console.log("Высокий уровень достатка");
+} else {
+    console.log("Произошла ошибка");
+}
